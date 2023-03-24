@@ -208,33 +208,7 @@ Now, you can download the artifacts by clicking on the Download button as shown 
 
 ### Test Execution
 
-The CLI option *--config* is used for providing the custom HyperExecute YAML file (i.e. *yaml/win/cucumber_hyperexecute_autosplit_sample.yaml* for Windows and *yaml/linux/cucumber_hyperexecute_autosplit_sample.yaml* for Linux).
 
-#### Execute Cucumber tests using Autosplit mechanism on Windows platform
-
-Run the following command on the terminal to trigger Cucumber tests on the Windows platform. The *--download-artifacts* option is used to inform HyperExecute to download the artifacts for the job. The *--force-clean-artifacts* option force cleans any existing artifacts for the project.
-
-```bash
-./hyperexecute --config yaml/win/cucumber_hyperexecute_autosplit_sample.yaml --force-clean-artifacts --download-artifacts
-```
-
-#### Execute Cucumber tests using Autosplit mechanism on Linux platform
-
-Run the following command on the terminal to trigger Cucumber tests on the Linux platform. The *--download-artifacts* option is used to inform HyperExecute to download the artifacts for the job. The *--force-clean-artifacts* option force cleans any existing artifacts for the project.
-
-```bash
-./hyperexecute --config yaml/linux/cucumber_hyperexecute_autosplit_sample.yaml --force-clean-artifacts --download-artifacts
-```
-
-Visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/hyperexecute) to check the status of execution
-
-<img width="1414" alt="cucumber_autosplit_execution" src="https://user-images.githubusercontent.com/1688653/160453348-67a416d9-ec37-4467-9a51-1b20484f39f1.png">
-
-Shown below is the execution screenshot when the YAML file is triggered from the terminal:
-
-<img width="1412" alt="cucumber_autosplit_cli1_execution" src="https://user-images.githubusercontent.com/1688653/159763098-bbb5af76-bf4f-42f3-a4f0-fc1dda8347b3.png">
-
-<img width="1408" alt="cucumber_autosplit_cli2_execution" src="https://user-images.githubusercontent.com/1688653/159763105-58c49a6b-68e2-4e1e-a413-b03dc23ad03d.png">
 
 # Matrix Execution with Cucumber
 
@@ -339,43 +313,10 @@ The CLI option *--config* is used for providing the custom HyperExecute YAML fil
 Run the following command on the terminal to trigger Cucumber tests on the Windows platform. The *--download-artifacts* option is used to inform HyperExecute to download the artifacts for the job. The *--force-clean-artifacts* option force cleans any existing artifacts for the project.
 
 ```bash
-./hyperexecute --config yaml/win/cucumber_hyperexecute_matrix_sample.yaml --force-clean-artifacts --download-artifacts
+./hyperexecute --user=$LT_USERNAME --key=$LT_ACCESS_KEY --config yaml/win/cucumber_hyperexecute_matrix_sample.yaml --download-artifacts --force-clean-artifacts
+
 ```
 
-#### Execute Cucumber tests using Matrix mechanism on Linux platform
-
-Run the following command on the terminal to trigger Cucumber tests on the Linux platform. The *--download-artifacts* option is used to inform HyperExecute to download the artifacts for the job. The *--force-clean-artifacts* option force cleans any existing artifacts for the project.
-
-```bash
-./hyperexecute --config yaml/linux/cucumber_hyperexecute_matrix_sample.yaml --force-clean-artifacts --download-artifacts
-```
-
-Visit [HyperExecute Automation Dashboard](https://automation.lambdatest.com/hyperexecute) to check the status of execution:
-
-<img width="1414" alt="cucumber_matrix_execution" src="https://user-images.githubusercontent.com/1688653/160452786-e60e6ee2-b0e9-4248-81aa-ca07ecbfdd1f.png">
-
-Shown below is the execution screenshot when the YAML file is triggered from the terminal:
-
-<img width="1413" alt="cucumber_cli1_execution" src="https://user-images.githubusercontent.com/1688653/159763909-305b13b7-df13-43de-b115-09565387edce.png">
-
-<img width="1101" alt="cucumber_cli2_execution" src="https://user-images.githubusercontent.com/1688653/159763911-61ba72e1-ed47-40c8-914a-2a8e3ab8db2a.png">
-
-## Secrets Management
-
-In case you want to use any secret keys in the YAML file, the same can be set by clicking on the *Secrets* button the dashboard.
-
-<img width="703" alt="cucumber_secrets_key_1" src="https://user-images.githubusercontent.com/1688653/152540968-90e4e8bc-3eb4-4259-856b-5e513cbd19b5.png">
-
-Now create a *secret* key that you can use in the HyperExecute YAML file.
-
-<img width="359" alt="cucumber_management_1" src="https://user-images.githubusercontent.com/1688653/153250877-e58445d1-2735-409a-970d-14253991c69e.png">
-
-All you need to do is create an environment variable that uses the secret key:
-
-```yaml
-env:
-  PAT: ${{ .secrets.testKey }}
-```
 
 ## Navigation in Automation Dashboard
 
