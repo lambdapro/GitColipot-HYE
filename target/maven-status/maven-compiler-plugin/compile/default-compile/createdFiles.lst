@@ -1,0 +1,6 @@
+Steps\Hooks.class
+Steps\BingSearchSteps.class
+Steps\SeleniumPlaygroundSteps.class
+Runner\TestRunner.class
+Steps\LambdaTestSearchSteps.class
+Steps\ToDoSteps.class
