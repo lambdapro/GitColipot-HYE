@@ -17,7 +17,7 @@ public class ToDoSteps extends TestRunner
 	public void user_already_on_home_page()
 	{
 		System.out.println(driver.getCapabilities());
-		driver.get("http://localhost/ToDoApp/");
+		driver.get("https://lambdapro.github.io/GitColipot-HYE/");
 
 	}
 
