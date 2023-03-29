@@ -11,3 +11,4 @@ artifacts-old
 .idea
 app/lt.log
 .hyperexecute
+hyperexecute-cli.log
